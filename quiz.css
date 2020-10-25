@@ -1,0 +1,24 @@
+.content {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+h1{
+	font-weight: 700;
+	font-size: 5em;
+}
+html{
+	background: url(https://www.fcc.gov/sites/default/files/coronavirus.mobile.banner_1.png) no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	font-family: 'Rubik', sans-serif;
+	color: white;
+}
+
+#main {
+  margin: auto;
+  width: 52%;
+  border: none;
+  padding: 10px;
+}
