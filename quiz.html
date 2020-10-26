@@ -42,7 +42,7 @@
 <label for="No"><input type="radio" name="q6" value="0" id="No" />No</label>
 
 <h2>In the past 24 hours, have you had new loss of taste or smell?</h2>
-<label for="Yes"><input type="radio" name="q7" value="10" id="Yes" />Yes</label>
+<label for="Yes"><input type="radio" name="q7" value="20" id="Yes" />Yes</label>
 <label for="No"><input type="radio" name="q7" value="0" id="No" />No</label>
 
 <h2>In the past 24 hours, have you had sore throat?</h2>
@@ -61,13 +61,33 @@
 <label for="Yes"><input type="radio" name="q11" value="10" id="Yes" />Yes</label>
 <label for="No"><input type="radio" name="q11" value="0" id="No" />No</label>
 
-<h2>In the last 3 days, have you been in known close contact with a person who is lab confirmed to have COVID-19?</h2>
-<label for="Yes"><input type="radio" name="q12" value="30" id="Yes" />Yes</label>
+<h2>In the past 24 hours, did you have trouble breathing?</h2>
+<label for="Yes"><input type="radio" name="q12" value="20" id="Yes" />Yes</label>
 <label for="No"><input type="radio" name="q12" value="0" id="No" />No</label>
 
-<h2>Are you being quarantined or living with anyone who has tested positive and is in isolation for COVID-19?</h2>
-<label for="Yes"><input type="radio" name="q13" value="30" id="Yes" />Yes</label>
+<h2>In the past 24 hours, did you have persistent pain or pressure in the chest?</h2>
+<label for="Yes"><input type="radio" name="q13" value="20" id="Yes" />Yes</label>
 <label for="No"><input type="radio" name="q13" value="0" id="No" />No</label>
+
+<h2>In the past 24 hours, have you had new confusion?</h2>
+<label for="Yes"><input type="radio" name="q14" value="20" id="Yes" />Yes</label>
+<label for="No"><input type="radio" name="q14" value="0" id="No" />No</label>
+
+<h2>In the past 24 hours, have you been unable to wake or stay awake?</h2>
+<label for="Yes"><input type="radio" name="q15" value="20" id="Yes" />Yes</label>
+<label for="No"><input type="radio" name="q15" value="0" id="No" />No</label>
+
+<h2>In the past 24 hours, have you had bluish lips or face?</h2>
+<label for="Yes"><input type="radio" name="q16" value="20" id="Yes" />Yes</label>
+<label for="No"><input type="radio" name="q16" value="0" id="No" />No</label>
+
+<h2>In the last 3 days, have you been in known close contact with a person who is lab confirmed to have COVID-19?</h2>
+<label for="Yes"><input type="radio" name="q17" value="30" id="Yes" />Yes</label>
+<label for="No"><input type="radio" name="q17" value="0" id="No" />No</label>
+
+<h2>Are you being quarantined or living with anyone who has tested positive and is in isolation for COVID-19?</h2>
+<label for="Yes"><input type="radio" name="q18" value="30" id="Yes" />Yes</label>
+<label for="No"><input type="radio" name="q18" value="0" id="No" />No</label>
 
 <button type="submit" value="Submit">Submit</button>
 
@@ -94,9 +114,14 @@ document.getElementById("Questions").onsubmit=function() {
 	   q11 = parseInt(document.querySelector('input[name = "q11"]:checked').value);
 	   q12 = parseInt(document.querySelector('input[name = "q12"]:checked').value);
 	   q13 = parseInt(document.querySelector('input[name = "q13"]:checked').value);
+	   q14 = parseInt(document.querySelector('input[name = "q14"]:checked').value);
+	   q15 = parseInt(document.querySelector('input[name = "q15"]:checked').value);
+	   q16 = parseInt(document.querySelector('input[name = "q16"]:checked').value);
+	   q17 = parseInt(document.querySelector('input[name = "q17"]:checked').value);
+	   q18 = parseInt(document.querySelector('input[name = "q18"]:checked').value);
 	   
 	   
-	   result = q1 + q2 + q3 + q4 + q5 + q6 + q7 + q8 + q9 + q10 + q11 + q12 + q13;
+	   result = q1 + q2 + q3 + q4 + q5 + q6 + q7 + q8 + q9 + q10 + q11 + q12 + q13 + q14 + q15 + q16 + q17 + q18;
 
 	   // if result >= 30 save into database as potentially infected 
 	   
