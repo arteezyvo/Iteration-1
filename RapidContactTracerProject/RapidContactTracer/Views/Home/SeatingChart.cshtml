@@ -1,4 +1,4 @@
-﻿@{
+@{
     ViewBag.Title = "Seating Chart";
 }
 
@@ -77,26 +77,32 @@
 <div class="container2">
     <div class="row" id="row1">
         <div class="column c1">
-            <a><p>Seat 1</p><span class="s-name">Name</span></a>
-            <a><p>Seat 2</p><span class="s-name">Name</span></a>
-            <a><p>Seat 3</p><span class="s-name">Name</span></a>
+            <a><p onclick="setTimeout(myFunction, 2000);">Seat 1</p><span class="s-name">Name</span></a>
+            <a><p onclick="setTimeout(myFunction, 2000);">Seat 2</p><span class="s-name">Name</span></a>
+            <a><p onclick="setTimeout(myFunction, 3000);">Seat 3</p><span class="s-name">Name</span></a>
         </div>
         <div class="column c2">
-            <a><p>Seat 4</p><span class="s-name">Name</span></a>
-            <a><p>Seat 5</p><span class="s-name">Name</span></a>
-            <a><p>Seat 6</p><span class="s-name">Name</span></a>
+            <a><p onclick="setTimeout(myFunction, 3000);">Seat 4</p><span class="s-name">Name</span></a>
+            <a><p onclick="setTimeout(myFunction, 3000);">Seat 5</p><span class="s-name">Name</span></a>
+            <a><p onclick="setTimeout(myFunction, 3000);">Seat 6</p><span class="s-name">Name</span></a>
         </div>
     </div>
     <div class="row" id="row1">
         <div class="column c1">
-            <a><p>Seat 7</p><span class="s-name">Name</span></a>
-            <a><p>Seat 8</p><span class="s-name">Name</span></a>
-            <a><p>Seat 9</p><span class="s-name">Name</span></a>
+            <a><p onclick="setTimeout(myFunction, 3000);">Seat 7</p><span class="s-name">Name</span></a>
+            <a><p onclick="setTimeout(myFunction, 3000);">Seat 8</p><span class="s-name">Name</span></a>
+            <a><p onclick="setTimeout(myFunction, 3000);">Seat 9</p><span class="s-name">Name</span></a>
         </div>
         <div class="column c2">
-            <a><p>Seat 10</p><span class="s-name">Name</span></a>
-            <a><p>Seat 11</p><span class="s-name">Name</span></a>
-            <a><p>Seat 12</p><span class="s-name">Name</span></a>
+            <a><p onclick="setTimeout(myFunction, 3000);">Seat 10</p><span class="s-name">Name</span></a>
+            <a><p onclick="setTimeout(myFunction, 3000);">Seat 11</p><span class="s-name">Name</span></a>
+            <a><p onclick="setTimeout(myFunction, 3000);">Seat 12</p><span class="s-name">Name</span></a>
         </div>
     </div>
 </div>
+
+<script>
+    function myFunction() {
+        alert('You have to quarantine for 14 days');
+    }
+</script>
