@@ -1,0 +1,116 @@
+﻿@{
+    ViewBag.Title = "About";
+}
+
+<div class="collapse navbar-collapse" id="bs-nav-demo">
+    <ul class="nav navbar-nav navbar-right">
+        <li id="login-click" onclick="document.getElementById('id01').style.display='block'"><a href="#"><i class="fas fa-sign-up-alt"></i> Sign Up</a></li>
+        <div id="id01" class="modal">
+            <form class="signup-content animate" action="/action_page.php">
+                <div class="container">
+                    <h1>Sign Up</h1>
+                    <p>Please fill in this form to create an account.</p>
+                    <label for="email"><b>Email</b></label>
+                    <input type="text" placeholder="Enter Email" name="email" required>
+
+                    <label for="psw"><b>Password</b></label>
+                    <input type="password" placeholder="Enter Password" name="psw" required>
+
+                    <label for="psw-repeat"><b>Repeat Password</b></label>
+                    <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+
+                    <label>
+                        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+                    </label>
+
+                    <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+
+                    <div class="container">
+                        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                        <button type="submit" class="signup">Sign Up</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <!-- Button to open the login login form -->
+        <li id="login-click" onclick="document.getElementById('id04').style.display='block'"><a href="#"><i class="fas fa-sign-in-alt"></i> Sign In</a></li>
+
+        <!-- The login -->
+        <div id="id04" class="login">
+            <!-- login Content -->
+            <form class="login-content animate" action="/action_page.php">
+                <div class="container">
+                    <label for="uname"><b>Username</b></label>
+                    <input type="text" placeholder="Enter Username" name="uname" required>
+
+                    <label for="psw"><b>Password</b></label>
+                    <input type="password" placeholder="Enter Password" name="psw" required>
+
+                    <button type="submit">Submit</button>
+                    <label>
+                        <input type="checkbox" checked="checked" name="remember"> Remember me
+                    </label>
+                </div>
+
+                <div class="container">
+                    <button type="button" onclick="document.getElementById('id04').style.display='none'" class="cancelbtn">Cancel</button>
+                    <span class="psw"> <a href="#">Forgot password?</a></span>
+                </div>
+            </form>
+        </div>
+    </ul>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <div id="content">
+                <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+                <h1>Testing Information</h1>
+                <hr>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="container-fluid px-0">
+    <div class="row align-items-center content">
+        <div class="col-md-6 order-2 order-md-1">
+            <img src="~/Content/shannonhealth.jpg" alt="" style="float: left; width: 100%" alt="" class="img-fluid">
+        </div>
+        <div class="col-md-6 text-center order-1 order-md-2">
+            <div class="row justify-content-center">
+                <div class="col-10 col-lg-8 blurb mb-5 mb-md-0">
+                    <h2>Contact Info</h2>
+                    <img src="~/Content/lolli_icon.png" alt="" class="d-none d-lg-inline">
+
+                    <p class="lead">
+                        shannonhealth.com<br />
+                        120 E Harris Ave, San Angelo, TX 76903<br />
+                        (325) 653-6741
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row align-items-center content">
+        <div class="col-md-6 text-center">
+            <div class="row justify-content-center">
+                <div class="col-10 col-lg-8 blurb mb-5 mb-md-0">
+                    <h2>Contact Info</h2>
+                    <img src="imgs/lolli_icon.png" alt="" class="d-none d-lg-inline">
+                    <p class="lead">
+                        angelo.edu/services/testing_center/<br />
+                        testingcenter@angelo.edu<br />
+                        (325) 942-2624
+                    </p>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <img src="~/Content/asu.png" style="float: right; width: 100%" alt="" class="img-fluid">
+        </div>
+    </div>
+
+</section>
