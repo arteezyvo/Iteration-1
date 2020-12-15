@@ -1,0 +1,206 @@
+﻿@{
+    ViewBag.Title = "Seating Chart";
+}
+
+
+<div class="collapse navbar-collapse" id="bs-nav-demo">
+    <ul class="nav navbar-nav navbar-right">
+        <li id="login-click" onclick="document.getElementById('id01').style.display='block'"><a href="#"><i class="fas fa-sign-up-alt"></i> Sign Up</a></li>
+        <div id="id01" class="modal">
+            <form class="signup-content animate" action="/action_page.php">
+                <div class="container">
+                    <h1>Sign Up</h1>
+                    <p>Please fill in this form to create an account.</p>
+                    <label for="email"><b>Email</b></label>
+                    <input type="text" placeholder="Enter Email" name="email" required>
+
+                    <label for="psw"><b>Password</b></label>
+                    <input type="password" placeholder="Enter Password" name="psw" required>
+
+                    <label for="psw-repeat"><b>Repeat Password</b></label>
+                    <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+
+                    <label>
+                        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+                    </label>
+
+                    <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+
+                    <div class="container">
+                        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                        <button type="submit" class="signup">Sign Up</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <!-- Button to open the login login form -->
+        <li id="login-click" onclick="document.getElementById('id04').style.display='block'"><a href="#"><i class="fas fa-sign-in-alt"></i> Sign In</a></li>
+
+        <!-- The login -->
+        <div id="id04" class="login">
+            <!-- login Content -->
+            <form class="login-content animate" action="/action_page.php">
+                <div class="container">
+                    <label for="uname"><b>Username</b></label>
+                    <input type="text" placeholder="Enter Username" name="uname" required>
+
+                    <label for="psw"><b>Password</b></label>
+                    <input type="password" placeholder="Enter Password" name="psw" required>
+
+                    <button type="submit">Submit</button>
+                    <label>
+                        <input type="checkbox" checked="checked" name="remember"> Remember me
+                    </label>
+                </div>
+
+                <div class="container">
+                    <button type="button" onclick="document.getElementById('id04').style.display='none'" class="cancelbtn">Cancel</button>
+                    <span class="psw"> <a href="#">Forgot password?</a></span>
+                </div>
+            </form>
+        </div>
+    </ul>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <div id="content">
+                <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+                <h1>Seating Chart</h1>
+                <hr>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--<div class="container2">
+    <div class="row" id="row1">
+        <div class="column c1">
+            <a><p onclick="setTimeout(myFunction, 2000);">Seat 1</p><span class="s-name">Name</span></a>
+            <a><p onclick="setTimeout(myFunction, 2000);">Seat 2</p><span class="s-name">Name</span></a>
+            <a><p onclick="setTimeout(myFunction, 3000);">Seat 3</p><span class="s-name">Name</span></a>
+        </div>
+        <div class="column c2">
+            <a><p onclick="setTimeout(myFunction, 3000);">Seat 4</p><span class="s-name">Name</span></a>
+            <a><p onclick="setTimeout(myFunction, 3000);">Seat 5</p><span class="s-name">Name</span></a>
+            <a><p onclick="setTimeout(myFunction, 3000);">Seat 6</p><span class="s-name">Name</span></a>
+        </div>
+    </div>
+    <div class="row" id="row1">
+        <div class="column c1">
+            <a><p onclick="setTimeout(myFunction, 3000);">Seat 7</p><span class="s-name">Name</span></a>
+            <a><p onclick="setTimeout(myFunction, 3000);">Seat 8</p><span class="s-name">Name</span></a>
+            <a><p onclick="setTimeout(myFunction, 3000);">Seat 9</p><span class="s-name">Name</span></a>
+        </div>
+        <div class="column c2">
+            <a><p onclick="setTimeout(myFunction, 3000);">Seat 10</p><span class="s-name">Name</span></a>
+            <a><p onclick="setTimeout(myFunction, 3000);">Seat 11</p><span class="s-name">Name</span></a>
+            <a><p onclick="setTimeout(myFunction, 3000);">Seat 12</p><span class="s-name">Name</span></a>
+        </div>
+    </div>
+</div>
+
+<script>
+    function myFunction() {
+        alert('You have to quarantine for 14 days');
+    }
+</script>-->
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        .seat {
+            height: 150px;
+            width: 150px;
+            border: 5px solid gray;
+            cursor: pointer;
+            background-color: white;
+        }
+
+        .walk {
+            padding-left: 250px;
+        }
+
+        #board {
+            background-color: gray;
+            height: 150px;
+            width: 550px;
+            border: 5px solid gray;
+            cursor: pointer;
+        }
+    </style>
+
+
+
+</head>
+<body>
+
+    <div style="border:1px solid gray; width:130px;">
+        <table>
+            <tr>
+                <td colspan="6"></td>
+                <td><div class="board"></div></td>
+            </tr>
+            <tr>
+                <td><div class="seat"></div> </td>
+                <td><div class="seat"></div></td>
+                <td><div class="seat"></div></td>
+                <td class="walk">  </td>
+                <td><div class="seat"></div></td>
+                <td><div class="seat"></div></td>
+                <td><div class="seat"></div></td>
+            </tr>
+            <tr>
+                <td><div class="seat"></div> </td>
+                <td><div class="seat"></div></td>
+                <td><div class="seat"></div></td>
+                <td class="walk">  </td>
+                <td><div class="seat"></div></td>
+                <td><div class="seat"></div></td>
+                <td><div class="seat"></div></td>
+            </tr>
+            <tr>
+                <td><div class="seat"></div> </td>
+                <td><div class="seat"></div></td>
+                <td><div class="seat"></div></td>
+                <td class="walk">  </td>
+                <td><div class="seat"></div></td>
+                <td><div class="seat"></div></td>
+                <td><div class="seat"></div></td>
+            </tr>
+            <tr>
+                <td><div class="seat"></div> </td>
+                <td><div class="seat"></div></td>
+                <td><div class="seat"></div></td>
+                <td class="walk">  </td>
+                <td><div class="seat"></div></td>
+                <td><div class="seat"></div></td>
+                <td><div class="seat"></div></td>
+            </tr>
+            
+        </table>
+    </div>
+
+
+    <script>
+
+        allSeats = document.querySelectorAll('.seat');
+        for (var i = 0; i < allSeats.length; i++) {
+            var seat = allSeats[i];
+            seat.addEventListener('click', function () {
+                var bgclr = this.style.backgroundColor;
+                if (bgclr == 'red')
+                    this.style.backgroundColor = 'white'
+                else
+                    this.style.backgroundColor = 'red'
+            }, false);
+        }
+
+    </script>
+
+
+</body>
+</html>
