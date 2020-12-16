@@ -1,0 +1,153 @@
+﻿@model RapidContactTracer.Models.User
+@{
+    ViewBag.Title = "Screening";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <div id="content">
+                <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+                <h1>Wellness Screening Quiz</h1>
+                <hr>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="main">
+    <!-- open main div -->
+    <form id="Questions">
+
+        <h2>In the last 3 days, have you had Fever of at least 100 degrees F or Chills?</h2>
+        <label for="Yes"><input type="radio" name="q1" value="20" id="Yes" />Yes</label>
+        <label for="No"><input type="radio" name="q1" value="0" id="No" />No</label>
+
+        <h2>In the past 24 hours, have you had fatigue?</h2>
+        <label for="Yes"><input type="radio" name="q2" value="10" id="Yes" />Yes</label>
+        <label for="No"><input type="radio" name="q2" value="0" id="No" />No</label>
+
+        <h2>In the past 24 hours, have you had cough?</h2>
+        <label for="Yes"><input type="radio" name="q3" value="10" id="Yes" />Yes</label>
+        <label for="No"><input type="radio" name="q3" value="0" id="No" />No</label>
+
+        <h2>In the past 24 hours, have you had shortness of breath or difficulty breathing?</h2>
+        <label for="Yes"><input type="radio" name="q4" value="10" id="Yes" />Yes</label>
+        <label for="No"><input type="radio" name="q4" value="0" id="No" />No</label>
+
+        <h2>In the past 24 hours, did your whole body muscle aches?</h2>
+        <label for="Yes"><input type="radio" name="q5" value="10" id="Yes" />Yes</label>
+        <label for="No"><input type="radio" name="q5" value="0" id="No" />No</label>
+
+        <h2>In the past 24 hours, have you had new or worsening headache?</h2>
+        <label for="Yes"><input type="radio" name="q6" value="10" id="Yes" />Yes</label>
+        <label for="No"><input type="radio" name="q6" value="0" id="No" />No</label>
+
+        <h2>In the past 24 hours, have you had new loss of taste or smell?</h2>
+        <label for="Yes"><input type="radio" name="q7" value="20" id="Yes" />Yes</label>
+        <label for="No"><input type="radio" name="q7" value="0" id="No" />No</label>
+
+        <h2>In the past 24 hours, have you had sore throat?</h2>
+        <label for="Yes"><input type="radio" name="q8" value="10" id="Yes" />Yes</label>
+        <label for="No"><input type="radio" name="q8" value="0" id="No" />No</label>
+
+        <h2>In the past 24 hours, have you had congestion or runny nose?</h2>
+        <label for="Yes"><input type="radio" name="q9" value="10" id="Yes" />Yes</label>
+        <label for="No"><input type="radio" name="q9" value="0" id="No" />No</label>
+
+        <h2>In the past 24 hours, have you had nausea or vomiting?</h2>
+        <label for="Yes"><input type="radio" name="q10" value="10" id="Yes" />Yes</label>
+        <label for="No"><input type="radio" name="q10" value="0" id="No" />No</label>
+
+        <h2>In the past 24 hours, have you had diarrhea?</h2>
+        <label for="Yes"><input type="radio" name="q11" value="10" id="Yes" />Yes</label>
+        <label for="No"><input type="radio" name="q11" value="0" id="No" />No</label>
+
+        <h2>In the past 24 hours, did you have trouble breathing?</h2>
+        <label for="Yes"><input type="radio" name="q12" value="20" id="Yes" />Yes</label>
+        <label for="No"><input type="radio" name="q12" value="0" id="No" />No</label>
+
+        <h2>In the past 24 hours, did you have persistent pain or pressure in the chest?</h2>
+        <label for="Yes"><input type="radio" name="q13" value="20" id="Yes" />Yes</label>
+        <label for="No"><input type="radio" name="q13" value="0" id="No" />No</label>
+
+        <h2>In the past 24 hours, have you had new confusion?</h2>
+        <label for="Yes"><input type="radio" name="q14" value="20" id="Yes" />Yes</label>
+        <label for="No"><input type="radio" name="q14" value="0" id="No" />No</label>
+
+        <h2>In the past 24 hours, have you been unable to wake or stay awake?</h2>
+        <label for="Yes"><input type="radio" name="q15" value="20" id="Yes" />Yes</label>
+        <label for="No"><input type="radio" name="q15" value="0" id="No" />No</label>
+
+        <h2>In the past 24 hours, have you had bluish lips or face?</h2>
+        <label for="Yes"><input type="radio" name="q16" value="20" id="Yes" />Yes</label>
+        <label for="No"><input type="radio" name="q16" value="0" id="No" />No</label>
+
+        <h2>In the last 3 days, have you been in known close contact with a person who is lab confirmed to have COVID-19?</h2>
+        <label for="Yes"><input type="radio" name="q17" value="30" id="Yes" />Yes</label>
+        <label for="No"><input type="radio" name="q17" value="0" id="No" />No</label>
+
+        <h2>Are you being quarantined or living with anyone who has tested positive and is in isolation for COVID-19?</h2>
+        <label for="Yes"><input type="radio" name="q18" value="30" id="Yes" />Yes</label>
+        <label for="No"><input type="radio" name="q18" value="0" id="No" />No</label>
+
+
+        <button type="submit" value="Submit">Submit</button>
+
+    </form>
+    <p>Your point is: <span id="point">__</span></p>
+    <h1 id="infected"></h1>
+    <h2>Thank you for taking the Wellness Screening Quiz</h2>
+
+</div><!-- close main div -->
+<script>
+    document.getElementById("Questions").onsubmit = function () {
+        q1 = parseInt(document.querySelector('input[name = "q1"]:checked').value);
+        q2 = parseInt(document.querySelector('input[name = "q2"]:checked').value);
+        q3 = parseInt(document.querySelector('input[name = "q3"]:checked').value);
+        q4 = parseInt(document.querySelector('input[name = "q4"]:checked').value);
+        q5 = parseInt(document.querySelector('input[name = "q5"]:checked').value);
+        q6 = parseInt(document.querySelector('input[name = "q6"]:checked').value);
+        q7 = parseInt(document.querySelector('input[name = "q7"]:checked').value);
+        q8 = parseInt(document.querySelector('input[name = "q8"]:checked').value);
+        q9 = parseInt(document.querySelector('input[name = "q9"]:checked').value);
+        q10 = parseInt(document.querySelector('input[name = "q10"]:checked').value);
+        q11 = parseInt(document.querySelector('input[name = "q11"]:checked').value);
+        q12 = parseInt(document.querySelector('input[name = "q12"]:checked').value);
+        q13 = parseInt(document.querySelector('input[name = "q13"]:checked').value);
+        q14 = parseInt(document.querySelector('input[name = "q14"]:checked').value);
+        q15 = parseInt(document.querySelector('input[name = "q15"]:checked').value);
+        q16 = parseInt(document.querySelector('input[name = "q16"]:checked').value);
+        q17 = parseInt(document.querySelector('input[name = "q17"]:checked').value);
+        q18 = parseInt(document.querySelector('input[name = "q18"]:checked').value);
+
+
+        result = q1 + q2 + q3 + q4 + q5 + q6 + q7 + q8 + q9 + q10 + q11 + q12 + q13 + q14 + q15 + q16 + q17 + q18;
+        document.getElementById("point").innerHTML = result;
+        // if result >= 30 save into database as potentially infected
+
+        if (result >= 30) {
+            result2 = "You are potentially infected!"
+        }
+        else
+            result2 = "Congratulation! You are not infected."
+        document.getElementById("infected").innerHTML = result2;
+        return false;
+    }
+
+</script>
+
+<style>
+
+    #main {
+        width: 80%;
+        max-width: 950px;
+        border: 1px gray solid;
+        margin: auto;
+        padding: 10px;
+        background-color: black;
+        border-radius: 10px;
+    }
+</style>
